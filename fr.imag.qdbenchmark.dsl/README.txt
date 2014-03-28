@@ -1,0 +1,2 @@
+Our extension of the ycsb core package (https://github.com/jccastrejon/ycsb) depends on this project. 
+We need to export it as a JAR file to our local maven repository  (M2_REPO/fr/imag/qdbenchmark/1.0/qdbenchmark-1.0.jar) before building the ycsb project.
