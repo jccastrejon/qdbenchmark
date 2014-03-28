@@ -1,0 +1,38 @@
+grammar fr.imag.qdbenchmark.QdBenchmarkDsl with org.eclipse.xtext.common.Terminals
+
+generate qdBenchmarkDsl "http://www.imag.fr/qdbenchmark/QdBenchmarkDsl"
+
+Schema:
+	name=ID ('[' (attributes+=Attribute)* ']')? entities+=Entity*;
+
+DataModel:
+	'KeyValue' | 'Graph' | 'Document' | 'Column-Family' | 'Relational';
+
+QualityCharacteristic:
+	'QualityCharacteristic' ('Reliability' | 'PerformanceEfficiency');
+
+QualitySubCharacteristic:
+	'QualitySubCharacteristic' ('Maturity' | 'Availability' | 'FaultTolerance' | 'Recoverability' | 'TimeBehaviour' |
+	'ResourceUtilisation');
+
+QualitySpecification:
+	characteristic=QualityCharacteristic
+	'{' subCharacteristics+=QualitySubCharacteristic* '}';
+
+Entity:
+	Set_ | Struct_ | Relationship_;
+
+Set_:
+	'Set' name=ID ('[' (attributes+=Attribute)* ']')? ('<' dataModel=DataModel '>')?
+	('{' entities+=Entity* ',' qualitySpecifications+=QualitySpecification* '}')?;
+
+Struct_:
+	'Struct' name=ID ('[' (attributes+=Attribute)* ']')?
+	('{' entities+=Entity* '}')?;
+
+Relationship_:
+	'Relationship' name=ID ('[' (attributes+=Attribute)* ']')?
+	('{' 'start' '=' start=ID 'end' '=' end=ID '}')?;
+
+Attribute:
+	name=ID "=" value=STRING;

@@ -1,0 +1,5 @@
+-- @path QdBenchmarkDsl=/fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/QdBenchmarkDsl.ecore
+
+module SchemaTransformations;
+create OUT : QdBenchmarkDsl from IN : QdBenchmarkDsl;
+
