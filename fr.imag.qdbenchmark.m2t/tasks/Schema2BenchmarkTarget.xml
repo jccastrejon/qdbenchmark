@@ -3,15 +3,15 @@
 <!-- Place this file in the target project and call it with "External Tools > Run As > Ant Build" -->
 <!-- You have to change the MODEL and the TARGET values -->
 
-<project basedir="." default="Schema2RooSample" name="fr.imag.qdbenchmark.m2tSample">
-	<import file="../../fr.imag.qdbenchmark.m2t/tasks/Schema2Roo.xml"/>
+<project basedir="." default="Schema2BenchmarkSample" name="fr.imag.qdbenchmark.m2tSample">
+	<import file="../../fr.imag.qdbenchmark.m2t/tasks/Schema2Benchmark.xml"/>
 
     <!-- Change the values of MODEL and TARGET to point to your model and output folder -->
 	<property name="MODEL" value="${basedir}/model/file.xmi"/>
 	<property name="TARGET" value="${basedir}/src-gen"/>
 
-	<target name="Schema2RooSample" description="Generate files in 'TARGET'">
-		<antcall target="Schema2Roo" >
+	<target name="Schema2BenchmarkSample" description="Generate files in 'TARGET'">
+		<antcall target="Schema2Benchmark" >
 			<param name="model" value="${MODEL}"/>
 			<param name="target" value="${TARGET}"/>
 		</antcall>

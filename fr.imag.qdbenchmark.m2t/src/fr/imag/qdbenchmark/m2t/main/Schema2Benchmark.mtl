@@ -1,8 +1,8 @@
 [comment encoding = UTF-8 /]
 [**
- * The documentation of the module Schema2Roo.
+ * The documentation of the module Schema2Benchmark.
  */]
-[module Schema2Roo('http://www.imag.fr/qdbenchmark/QdBenchmarkDsl')]
+[module Schema2Benchmark('http://www.imag.fr/qdbenchmark/QdBenchmarkDsl')]
 
 
 [**

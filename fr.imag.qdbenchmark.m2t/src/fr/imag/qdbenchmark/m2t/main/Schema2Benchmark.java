@@ -25,17 +25,17 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 
 /**
- * Entry point of the 'Schema2Roo' generation module.
+ * Entry point of the 'Schema2Benchmark' generation module.
  *
  * @generated
  */
-public class Schema2Roo extends AbstractAcceleoGenerator {
+public class Schema2Benchmark extends AbstractAcceleoGenerator {
     /**
      * The name of the module.
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/fr/imag/qdbenchmark/m2t/main/Schema2Roo";
+    public static final String MODULE_FILE_NAME = "/fr/imag/qdbenchmark/m2t/main/Schema2Benchmark";
     
     /**
      * The name of the templates that are to be generated.
@@ -65,7 +65,7 @@ public class Schema2Roo extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public Schema2Roo() {
+    public Schema2Benchmark() {
         // Empty implementation
     }
 
@@ -85,7 +85,7 @@ public class Schema2Roo extends AbstractAcceleoGenerator {
      *             the model cannot be loaded.
      * @generated
      */
-    public Schema2Roo(URI modelURI, File targetFolder,
+    public Schema2Benchmark(URI modelURI, File targetFolder,
             List<? extends Object> arguments) throws IOException {
         initialize(modelURI, targetFolder, arguments);
     }
@@ -106,7 +106,7 @@ public class Schema2Roo extends AbstractAcceleoGenerator {
      *             This can be thrown in two scenarios : the module cannot be found, or it cannot be loaded.
      * @generated
      */
-    public Schema2Roo(EObject model, File targetFolder,
+    public Schema2Benchmark(EObject model, File targetFolder,
             List<? extends Object> arguments) throws IOException {
         initialize(model, targetFolder, arguments);
     }
@@ -141,7 +141,7 @@ public class Schema2Roo extends AbstractAcceleoGenerator {
                  * add in "arguments" this "String" attribute.
                  */
                 
-                Schema2Roo generator = new Schema2Roo(modelURI, folder, arguments);
+                Schema2Benchmark generator = new Schema2Benchmark(modelURI, folder, arguments);
                 
                 /*
                  * Add the properties from the launch arguments.
