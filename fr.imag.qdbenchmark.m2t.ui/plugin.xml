@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IFile"
+            nameFilter="*.qdbenchmark"
+            id="fr.imag.qdbenchmark.m2t.ui.popupMenus.contribution.IFile">
+         <menu id="org.eclipse.acceleo.module.menu" label="QDBenchmark" path="additionsAcceleo">
+               <groupMarker name="acceleo"/> 
+         </menu>
+         <action
+               class="fr.imag.qdbenchmark.m2t.ui.popupMenus.AcceleoGenerateQDBenchmark2YCSBAction"
+               enablesFor="+"
+               id="fr.imag.qdbenchmark.m2t.ui.popupMenus.acceleoGenerateQDBenchmark2YCSBAction"
+               icon="icons/default.gif"
+               label="Generate QDBenchmark artifacts"
+               menubarPath="org.eclipse.acceleo.module.menu/acceleo"/>
+      </objectContribution>
+   </extension>
+</plugin>
