@@ -20,5 +20,6 @@ Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: fr.imag.qdbenchmark.ui.contentassist,
  fr.imag.qdbenchmark.ui.contentassist.antlr,
- fr.imag.qdbenchmark.ui.internal
+ fr.imag.qdbenchmark.ui.internal,
+ fr.imag.qdbenchmark.ui.quickfix
 Bundle-Activator: fr.imag.qdbenchmark.ui.internal.QdBenchmarkDslActivator

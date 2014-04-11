@@ -18,20 +18,32 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class QdBenchmarkDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected QdBenchmarkDslGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_Attribute_CommaKeyword_2_q;
+	protected AbstractElementAlias match_QualitySpecification___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q;
+	protected AbstractElementAlias match_Relationship__CommaKeyword_4_q;
 	protected AbstractElementAlias match_Relationship____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q;
 	protected AbstractElementAlias match_Schema___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_2__q;
-	protected AbstractElementAlias match_Set____LeftCurlyBracketKeyword_4_0_CommaKeyword_4_2_RightCurlyBracketKeyword_4_4__q;
-	protected AbstractElementAlias match_Set____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q;
+	protected AbstractElementAlias match_Set__CommaKeyword_6_q;
+	protected AbstractElementAlias match_Set____LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q;
+	protected AbstractElementAlias match_Set____LeftSquareBracketKeyword_4_0_RightSquareBracketKeyword_4_2__q;
+	protected AbstractElementAlias match_Set____NumberSignKeyword_3_0_NumberSignKeyword_3_2__q;
+	protected AbstractElementAlias match_Struct__CommaKeyword_4_q;
 	protected AbstractElementAlias match_Struct____LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q;
 	protected AbstractElementAlias match_Struct____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (QdBenchmarkDslGrammarAccess) access;
+		match_Attribute_CommaKeyword_2_q = new TokenAlias(false, true, grammarAccess.getAttributeAccess().getCommaKeyword_2());
+		match_QualitySpecification___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getQualitySpecificationAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getQualitySpecificationAccess().getRightCurlyBracketKeyword_1_2()));
+		match_Relationship__CommaKeyword_4_q = new TokenAlias(false, true, grammarAccess.getRelationship_Access().getCommaKeyword_4());
 		match_Relationship____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getRelationship_Access().getLeftSquareBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getRelationship_Access().getRightSquareBracketKeyword_2_2()));
 		match_Schema___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSchemaAccess().getLeftSquareBracketKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getSchemaAccess().getRightSquareBracketKeyword_1_2()));
-		match_Set____LeftCurlyBracketKeyword_4_0_CommaKeyword_4_2_RightCurlyBracketKeyword_4_4__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSet_Access().getLeftCurlyBracketKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getSet_Access().getCommaKeyword_4_2()), new TokenAlias(false, false, grammarAccess.getSet_Access().getRightCurlyBracketKeyword_4_4()));
-		match_Set____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSet_Access().getLeftSquareBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getSet_Access().getRightSquareBracketKeyword_2_2()));
+		match_Set__CommaKeyword_6_q = new TokenAlias(false, true, grammarAccess.getSet_Access().getCommaKeyword_6());
+		match_Set____LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSet_Access().getLeftCurlyBracketKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getSet_Access().getRightCurlyBracketKeyword_5_2()));
+		match_Set____LeftSquareBracketKeyword_4_0_RightSquareBracketKeyword_4_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSet_Access().getLeftSquareBracketKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getSet_Access().getRightSquareBracketKeyword_4_2()));
+		match_Set____NumberSignKeyword_3_0_NumberSignKeyword_3_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getSet_Access().getNumberSignKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getSet_Access().getNumberSignKeyword_3_2()));
+		match_Struct__CommaKeyword_4_q = new TokenAlias(false, true, grammarAccess.getStruct_Access().getCommaKeyword_4());
 		match_Struct____LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getStruct_Access().getLeftCurlyBracketKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getStruct_Access().getRightCurlyBracketKeyword_3_2()));
 		match_Struct____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getStruct_Access().getLeftSquareBracketKeyword_2_0()), new TokenAlias(false, false, grammarAccess.getStruct_Access().getRightSquareBracketKeyword_2_2()));
 	}
@@ -48,14 +60,26 @@ public class QdBenchmarkDslSyntacticSequencer extends AbstractSyntacticSequencer
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Relationship____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q.equals(syntax))
+			if(match_Attribute_CommaKeyword_2_q.equals(syntax))
+				emit_Attribute_CommaKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_QualitySpecification___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q.equals(syntax))
+				emit_QualitySpecification___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Relationship__CommaKeyword_4_q.equals(syntax))
+				emit_Relationship__CommaKeyword_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Relationship____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q.equals(syntax))
 				emit_Relationship____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Schema___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_2__q.equals(syntax))
 				emit_Schema___LeftSquareBracketKeyword_1_0_RightSquareBracketKeyword_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Set____LeftCurlyBracketKeyword_4_0_CommaKeyword_4_2_RightCurlyBracketKeyword_4_4__q.equals(syntax))
-				emit_Set____LeftCurlyBracketKeyword_4_0_CommaKeyword_4_2_RightCurlyBracketKeyword_4_4__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Set____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q.equals(syntax))
-				emit_Set____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Set__CommaKeyword_6_q.equals(syntax))
+				emit_Set__CommaKeyword_6_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Set____LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q.equals(syntax))
+				emit_Set____LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Set____LeftSquareBracketKeyword_4_0_RightSquareBracketKeyword_4_2__q.equals(syntax))
+				emit_Set____LeftSquareBracketKeyword_4_0_RightSquareBracketKeyword_4_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Set____NumberSignKeyword_3_0_NumberSignKeyword_3_2__q.equals(syntax))
+				emit_Set____NumberSignKeyword_3_0_NumberSignKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Struct__CommaKeyword_4_q.equals(syntax))
+				emit_Struct__CommaKeyword_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Struct____LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q.equals(syntax))
 				emit_Struct____LeftCurlyBracketKeyword_3_0_RightCurlyBracketKeyword_3_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Struct____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q.equals(syntax))
@@ -64,6 +88,30 @@ public class QdBenchmarkDslSyntacticSequencer extends AbstractSyntacticSequencer
 		}
 	}
 
+	/**
+	 * Syntax:
+	 *     ','?
+	 */
+	protected void emit_Attribute_CommaKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ('{' '}')?
+	 */
+	protected void emit_QualitySpecification___LeftCurlyBracketKeyword_1_0_RightCurlyBracketKeyword_1_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ','?
+	 */
+	protected void emit_Relationship__CommaKeyword_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Syntax:
 	 *     ('[' ']')?
@@ -82,9 +130,17 @@ public class QdBenchmarkDslSyntacticSequencer extends AbstractSyntacticSequencer
 	
 	/**
 	 * Syntax:
-	 *     ('{' ',' '}')?
+	 *     ','?
 	 */
-	protected void emit_Set____LeftCurlyBracketKeyword_4_0_CommaKeyword_4_2_RightCurlyBracketKeyword_4_4__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Set__CommaKeyword_6_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ('{' '}')?
+	 */
+	protected void emit_Set____LeftCurlyBracketKeyword_5_0_RightCurlyBracketKeyword_5_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -92,7 +148,23 @@ public class QdBenchmarkDslSyntacticSequencer extends AbstractSyntacticSequencer
 	 * Syntax:
 	 *     ('[' ']')?
 	 */
-	protected void emit_Set____LeftSquareBracketKeyword_2_0_RightSquareBracketKeyword_2_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Set____LeftSquareBracketKeyword_4_0_RightSquareBracketKeyword_4_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ('#' '#')?
+	 */
+	protected void emit_Set____NumberSignKeyword_3_0_NumberSignKeyword_3_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ','?
+	 */
+	protected void emit_Struct__CommaKeyword_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

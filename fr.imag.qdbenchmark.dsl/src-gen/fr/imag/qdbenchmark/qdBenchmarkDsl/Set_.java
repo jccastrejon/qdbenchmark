@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getDataModel <em>Data Model</em>}</li>
- *   <li>{@link fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getEntities <em>Entities</em>}</li>
  *   <li>{@link fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getQualitySpecifications <em>Quality Specifications</em>}</li>
+ *   <li>{@link fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getEntities <em>Entities</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,22 +51,6 @@ public interface Set_ extends Entity
   void setDataModel(String value);
 
   /**
-   * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
-   * The list contents are of type {@link fr.imag.qdbenchmark.qdBenchmarkDsl.Entity}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Entities</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Entities</em>' containment reference list.
-   * @see fr.imag.qdbenchmark.qdBenchmarkDsl.QdBenchmarkDslPackage#getSet__Entities()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Entity> getEntities();
-
-  /**
    * Returns the value of the '<em><b>Quality Specifications</b></em>' containment reference list.
    * The list contents are of type {@link fr.imag.qdbenchmark.qdBenchmarkDsl.QualitySpecification}.
    * <!-- begin-user-doc -->
@@ -81,5 +65,21 @@ public interface Set_ extends Entity
    * @generated
    */
   EList<QualitySpecification> getQualitySpecifications();
+
+  /**
+   * Returns the value of the '<em><b>Entities</b></em>' containment reference list.
+   * The list contents are of type {@link fr.imag.qdbenchmark.qdBenchmarkDsl.Entity}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Entities</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Entities</em>' containment reference list.
+   * @see fr.imag.qdbenchmark.qdBenchmarkDsl.QdBenchmarkDslPackage#getSet__Entities()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Entity> getEntities();
 
 } // Set_

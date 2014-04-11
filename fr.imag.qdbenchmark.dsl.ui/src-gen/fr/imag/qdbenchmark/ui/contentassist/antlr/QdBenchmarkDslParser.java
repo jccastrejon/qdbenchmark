@@ -46,10 +46,12 @@ public class QdBenchmarkDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getQualityCharacteristicAccess().getGroup(), "rule__QualityCharacteristic__Group__0");
 					put(grammarAccess.getQualitySubCharacteristicAccess().getGroup(), "rule__QualitySubCharacteristic__Group__0");
 					put(grammarAccess.getQualitySpecificationAccess().getGroup(), "rule__QualitySpecification__Group__0");
+					put(grammarAccess.getQualitySpecificationAccess().getGroup_1(), "rule__QualitySpecification__Group_1__0");
 					put(grammarAccess.getSet_Access().getGroup(), "rule__Set___Group__0");
 					put(grammarAccess.getSet_Access().getGroup_2(), "rule__Set___Group_2__0");
 					put(grammarAccess.getSet_Access().getGroup_3(), "rule__Set___Group_3__0");
 					put(grammarAccess.getSet_Access().getGroup_4(), "rule__Set___Group_4__0");
+					put(grammarAccess.getSet_Access().getGroup_5(), "rule__Set___Group_5__0");
 					put(grammarAccess.getStruct_Access().getGroup(), "rule__Struct___Group__0");
 					put(grammarAccess.getStruct_Access().getGroup_2(), "rule__Struct___Group_2__0");
 					put(grammarAccess.getStruct_Access().getGroup_3(), "rule__Struct___Group_3__0");
@@ -57,16 +59,17 @@ public class QdBenchmarkDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRelationship_Access().getGroup_2(), "rule__Relationship___Group_2__0");
 					put(grammarAccess.getRelationship_Access().getGroup_3(), "rule__Relationship___Group_3__0");
 					put(grammarAccess.getAttributeAccess().getGroup(), "rule__Attribute__Group__0");
+					put(grammarAccess.getAttributeAccess().getGroup_1(), "rule__Attribute__Group_1__0");
 					put(grammarAccess.getSchemaAccess().getNameAssignment_0(), "rule__Schema__NameAssignment_0");
 					put(grammarAccess.getSchemaAccess().getAttributesAssignment_1_1(), "rule__Schema__AttributesAssignment_1_1");
 					put(grammarAccess.getSchemaAccess().getEntitiesAssignment_2(), "rule__Schema__EntitiesAssignment_2");
 					put(grammarAccess.getQualitySpecificationAccess().getCharacteristicAssignment_0(), "rule__QualitySpecification__CharacteristicAssignment_0");
-					put(grammarAccess.getQualitySpecificationAccess().getSubCharacteristicsAssignment_2(), "rule__QualitySpecification__SubCharacteristicsAssignment_2");
+					put(grammarAccess.getQualitySpecificationAccess().getSubCharacteristicsAssignment_1_1(), "rule__QualitySpecification__SubCharacteristicsAssignment_1_1");
 					put(grammarAccess.getSet_Access().getNameAssignment_1(), "rule__Set___NameAssignment_1");
-					put(grammarAccess.getSet_Access().getAttributesAssignment_2_1(), "rule__Set___AttributesAssignment_2_1");
-					put(grammarAccess.getSet_Access().getDataModelAssignment_3_1(), "rule__Set___DataModelAssignment_3_1");
-					put(grammarAccess.getSet_Access().getEntitiesAssignment_4_1(), "rule__Set___EntitiesAssignment_4_1");
-					put(grammarAccess.getSet_Access().getQualitySpecificationsAssignment_4_3(), "rule__Set___QualitySpecificationsAssignment_4_3");
+					put(grammarAccess.getSet_Access().getDataModelAssignment_2_1(), "rule__Set___DataModelAssignment_2_1");
+					put(grammarAccess.getSet_Access().getQualitySpecificationsAssignment_3_1(), "rule__Set___QualitySpecificationsAssignment_3_1");
+					put(grammarAccess.getSet_Access().getAttributesAssignment_4_1(), "rule__Set___AttributesAssignment_4_1");
+					put(grammarAccess.getSet_Access().getEntitiesAssignment_5_1(), "rule__Set___EntitiesAssignment_5_1");
 					put(grammarAccess.getStruct_Access().getNameAssignment_1(), "rule__Struct___NameAssignment_1");
 					put(grammarAccess.getStruct_Access().getAttributesAssignment_2_1(), "rule__Struct___AttributesAssignment_2_1");
 					put(grammarAccess.getStruct_Access().getEntitiesAssignment_3_1(), "rule__Struct___EntitiesAssignment_3_1");
@@ -75,7 +78,7 @@ public class QdBenchmarkDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRelationship_Access().getStartAssignment_3_3(), "rule__Relationship___StartAssignment_3_3");
 					put(grammarAccess.getRelationship_Access().getEndAssignment_3_6(), "rule__Relationship___EndAssignment_3_6");
 					put(grammarAccess.getAttributeAccess().getNameAssignment_0(), "rule__Attribute__NameAssignment_0");
-					put(grammarAccess.getAttributeAccess().getValueAssignment_2(), "rule__Attribute__ValueAssignment_2");
+					put(grammarAccess.getAttributeAccess().getValueAssignment_1_1(), "rule__Attribute__ValueAssignment_1_1");
 				}
 			};
 		}

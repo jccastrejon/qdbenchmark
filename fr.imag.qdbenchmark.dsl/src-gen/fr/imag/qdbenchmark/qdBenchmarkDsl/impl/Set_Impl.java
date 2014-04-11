@@ -30,8 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link fr.imag.qdbenchmark.qdBenchmarkDsl.impl.Set_Impl#getDataModel <em>Data Model</em>}</li>
- *   <li>{@link fr.imag.qdbenchmark.qdBenchmarkDsl.impl.Set_Impl#getEntities <em>Entities</em>}</li>
  *   <li>{@link fr.imag.qdbenchmark.qdBenchmarkDsl.impl.Set_Impl#getQualitySpecifications <em>Quality Specifications</em>}</li>
+ *   <li>{@link fr.imag.qdbenchmark.qdBenchmarkDsl.impl.Set_Impl#getEntities <em>Entities</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,16 +60,6 @@ public class Set_Impl extends EntityImpl implements Set_
   protected String dataModel = DATA_MODEL_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEntities()
-   * @generated
-   * @ordered
-   */
-  protected EList<Entity> entities;
-
-  /**
    * The cached value of the '{@link #getQualitySpecifications() <em>Quality Specifications</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -78,6 +68,16 @@ public class Set_Impl extends EntityImpl implements Set_
    * @ordered
    */
   protected EList<QualitySpecification> qualitySpecifications;
+
+  /**
+   * The cached value of the '{@link #getEntities() <em>Entities</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getEntities()
+   * @generated
+   * @ordered
+   */
+  protected EList<Entity> entities;
 
   /**
    * <!-- begin-user-doc -->
@@ -128,20 +128,6 @@ public class Set_Impl extends EntityImpl implements Set_
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Entity> getEntities()
-  {
-    if (entities == null)
-    {
-      entities = new EObjectContainmentEList<Entity>(Entity.class, this, QdBenchmarkDslPackage.SET___ENTITIES);
-    }
-    return entities;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<QualitySpecification> getQualitySpecifications()
   {
     if (qualitySpecifications == null)
@@ -156,15 +142,29 @@ public class Set_Impl extends EntityImpl implements Set_
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Entity> getEntities()
+  {
+    if (entities == null)
+    {
+      entities = new EObjectContainmentEList<Entity>(Entity.class, this, QdBenchmarkDslPackage.SET___ENTITIES);
+    }
+    return entities;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case QdBenchmarkDslPackage.SET___ENTITIES:
-        return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
       case QdBenchmarkDslPackage.SET___QUALITY_SPECIFICATIONS:
         return ((InternalEList<?>)getQualitySpecifications()).basicRemove(otherEnd, msgs);
+      case QdBenchmarkDslPackage.SET___ENTITIES:
+        return ((InternalEList<?>)getEntities()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -181,10 +181,10 @@ public class Set_Impl extends EntityImpl implements Set_
     {
       case QdBenchmarkDslPackage.SET___DATA_MODEL:
         return getDataModel();
-      case QdBenchmarkDslPackage.SET___ENTITIES:
-        return getEntities();
       case QdBenchmarkDslPackage.SET___QUALITY_SPECIFICATIONS:
         return getQualitySpecifications();
+      case QdBenchmarkDslPackage.SET___ENTITIES:
+        return getEntities();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -203,13 +203,13 @@ public class Set_Impl extends EntityImpl implements Set_
       case QdBenchmarkDslPackage.SET___DATA_MODEL:
         setDataModel((String)newValue);
         return;
-      case QdBenchmarkDslPackage.SET___ENTITIES:
-        getEntities().clear();
-        getEntities().addAll((Collection<? extends Entity>)newValue);
-        return;
       case QdBenchmarkDslPackage.SET___QUALITY_SPECIFICATIONS:
         getQualitySpecifications().clear();
         getQualitySpecifications().addAll((Collection<? extends QualitySpecification>)newValue);
+        return;
+      case QdBenchmarkDslPackage.SET___ENTITIES:
+        getEntities().clear();
+        getEntities().addAll((Collection<? extends Entity>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -228,11 +228,11 @@ public class Set_Impl extends EntityImpl implements Set_
       case QdBenchmarkDslPackage.SET___DATA_MODEL:
         setDataModel(DATA_MODEL_EDEFAULT);
         return;
-      case QdBenchmarkDslPackage.SET___ENTITIES:
-        getEntities().clear();
-        return;
       case QdBenchmarkDslPackage.SET___QUALITY_SPECIFICATIONS:
         getQualitySpecifications().clear();
+        return;
+      case QdBenchmarkDslPackage.SET___ENTITIES:
+        getEntities().clear();
         return;
     }
     super.eUnset(featureID);
@@ -250,10 +250,10 @@ public class Set_Impl extends EntityImpl implements Set_
     {
       case QdBenchmarkDslPackage.SET___DATA_MODEL:
         return DATA_MODEL_EDEFAULT == null ? dataModel != null : !DATA_MODEL_EDEFAULT.equals(dataModel);
-      case QdBenchmarkDslPackage.SET___ENTITIES:
-        return entities != null && !entities.isEmpty();
       case QdBenchmarkDslPackage.SET___QUALITY_SPECIFICATIONS:
         return qualitySpecifications != null && !qualitySpecifications.isEmpty();
+      case QdBenchmarkDslPackage.SET___ENTITIES:
+        return entities != null && !entities.isEmpty();
     }
     return super.eIsSet(featureID);
   }

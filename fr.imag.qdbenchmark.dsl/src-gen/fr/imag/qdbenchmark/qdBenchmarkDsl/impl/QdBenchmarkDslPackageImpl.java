@@ -264,7 +264,7 @@ public class QdBenchmarkDslPackageImpl extends EPackageImpl implements QdBenchma
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSet__Entities()
+  public EReference getSet__QualitySpecifications()
   {
     return (EReference)set_EClass.getEStructuralFeatures().get(1);
   }
@@ -274,7 +274,7 @@ public class QdBenchmarkDslPackageImpl extends EPackageImpl implements QdBenchma
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSet__QualitySpecifications()
+  public EReference getSet__Entities()
   {
     return (EReference)set_EClass.getEStructuralFeatures().get(2);
   }
@@ -404,8 +404,8 @@ public class QdBenchmarkDslPackageImpl extends EPackageImpl implements QdBenchma
 
     set_EClass = createEClass(SET_);
     createEAttribute(set_EClass, SET___DATA_MODEL);
-    createEReference(set_EClass, SET___ENTITIES);
     createEReference(set_EClass, SET___QUALITY_SPECIFICATIONS);
+    createEReference(set_EClass, SET___ENTITIES);
 
     struct_EClass = createEClass(STRUCT_);
     createEReference(struct_EClass, STRUCT___ENTITIES);
@@ -468,8 +468,8 @@ public class QdBenchmarkDslPackageImpl extends EPackageImpl implements QdBenchma
 
     initEClass(set_EClass, Set_.class, "Set_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSet__DataModel(), ecorePackage.getEString(), "dataModel", null, 0, 1, Set_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSet__Entities(), this.getEntity(), null, "entities", null, 0, -1, Set_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSet__QualitySpecifications(), this.getQualitySpecification(), null, "qualitySpecifications", null, 0, -1, Set_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSet__Entities(), this.getEntity(), null, "entities", null, 0, -1, Set_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(struct_EClass, Struct_.class, "Struct_", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getStruct__Entities(), this.getEntity(), null, "entities", null, 0, -1, Struct_.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

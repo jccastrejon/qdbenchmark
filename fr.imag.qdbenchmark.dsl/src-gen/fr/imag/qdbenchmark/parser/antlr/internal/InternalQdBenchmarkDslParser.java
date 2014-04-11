@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'['", "']'", "'KeyValue'", "'Graph'", "'Document'", "'Column-Family'", "'Relational'", "'QualityCharacteristic'", "'Reliability'", "'PerformanceEfficiency'", "'QualitySubCharacteristic'", "'Maturity'", "'Availability'", "'FaultTolerance'", "'Recoverability'", "'TimeBehaviour'", "'ResourceUtilisation'", "'{'", "'}'", "'Set'", "'<'", "'>'", "','", "'Struct'", "'Relationship'", "'start'", "'='", "'end'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'['", "']'", "'KeyValue'", "'Graph'", "'Document'", "'Column-Family'", "'Relational'", "'QualityCharacteristic'", "'Reliability'", "'PerformanceEfficiency'", "'QualitySubCharacteristic'", "'Maturity'", "'Availability'", "'FaultTolerance'", "'Recoverability'", "'TimeBehaviour'", "'ResourceUtilisation'", "'{'", "'}'", "'Set'", "'<'", "'>'", "'#'", "','", "'Struct'", "'Relationship'", "'start'", "'='", "'end'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -55,6 +55,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
     public static final int T__12=12;
     public static final int T__38=38;
     public static final int T__11=11;
+    public static final int T__39=39;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_INT=6;
@@ -262,7 +263,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==30||(LA3_0>=34 && LA3_0<=35)) ) {
+                if ( (LA3_0==30||(LA3_0>=35 && LA3_0<=36)) ) {
                     alt3=1;
                 }
 
@@ -828,7 +829,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualitySpecification"
-    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:322:1: ruleQualitySpecification returns [EObject current=null] : ( ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' ) ;
+    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:322:1: ruleQualitySpecification returns [EObject current=null] : ( ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) (otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' )? ) ;
     public final EObject ruleQualitySpecification() throws RecognitionException {
         EObject current = null;
 
@@ -842,11 +843,11 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:325:28: ( ( ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:326:1: ( ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:325:28: ( ( ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) (otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' )? ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:326:1: ( ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) (otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' )? )
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:326:1: ( ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:326:2: ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}'
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:326:1: ( ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) (otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' )? )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:326:2: ( (lv_characteristic_0_0= ruleQualityCharacteristic ) ) (otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' )?
             {
             // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:326:2: ( (lv_characteristic_0_0= ruleQualityCharacteristic ) )
             // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:327:1: (lv_characteristic_0_0= ruleQualityCharacteristic )
@@ -879,63 +880,80 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleQualitySpecification797); 
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:344:2: (otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}' )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-                	newLeafNode(otherlv_1, grammarAccess.getQualitySpecificationAccess().getLeftCurlyBracketKeyword_1());
-                
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:348:1: ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )*
-            loop7:
-            do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+            if ( (LA8_0==28) ) {
+                alt8=1;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:344:4: otherlv_1= '{' ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )* otherlv_3= '}'
+                    {
+                    otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleQualitySpecification798); 
 
-                if ( (LA7_0==21) ) {
-                    alt7=1;
-                }
+                        	newLeafNode(otherlv_1, grammarAccess.getQualitySpecificationAccess().getLeftCurlyBracketKeyword_1_0());
+                        
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:348:1: ( (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic ) )*
+                    loop7:
+                    do {
+                        int alt7=2;
+                        int LA7_0 = input.LA(1);
 
-
-                switch (alt7) {
-            	case 1 :
-            	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:349:1: (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic )
-            	    {
-            	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:349:1: (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic )
-            	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:350:3: lv_subCharacteristics_2_0= ruleQualitySubCharacteristic
-            	    {
-            	     
-            	    	        newCompositeNode(grammarAccess.getQualitySpecificationAccess().getSubCharacteristicsQualitySubCharacteristicParserRuleCall_2_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_ruleQualitySubCharacteristic_in_ruleQualitySpecification818);
-            	    lv_subCharacteristics_2_0=ruleQualitySubCharacteristic();
-
-            	    state._fsp--;
+                        if ( (LA7_0==21) ) {
+                            alt7=1;
+                        }
 
 
-            	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getQualitySpecificationRule());
-            	    	        }
-            	           		add(
-            	           			current, 
-            	           			"subCharacteristics",
-            	            		lv_subCharacteristics_2_0, 
-            	            		"QualitySubCharacteristic");
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
+                        switch (alt7) {
+                    	case 1 :
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:349:1: (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic )
+                    	    {
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:349:1: (lv_subCharacteristics_2_0= ruleQualitySubCharacteristic )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:350:3: lv_subCharacteristics_2_0= ruleQualitySubCharacteristic
+                    	    {
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getQualitySpecificationAccess().getSubCharacteristicsQualitySubCharacteristicParserRuleCall_1_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleQualitySubCharacteristic_in_ruleQualitySpecification819);
+                    	    lv_subCharacteristics_2_0=ruleQualitySubCharacteristic();
 
-            	    }
+                    	    state._fsp--;
 
 
-            	    }
-            	    break;
+                    	    	        if (current==null) {
+                    	    	            current = createModelElementForParent(grammarAccess.getQualitySpecificationRule());
+                    	    	        }
+                    	           		add(
+                    	           			current, 
+                    	           			"subCharacteristics",
+                    	            		lv_subCharacteristics_2_0, 
+                    	            		"QualitySubCharacteristic");
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
 
-            	default :
-            	    break loop7;
-                }
-            } while (true);
+                    	    }
 
-            otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleQualitySpecification831); 
 
-                	newLeafNode(otherlv_3, grammarAccess.getQualitySpecificationAccess().getRightCurlyBracketKeyword_3());
-                
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop7;
+                        }
+                    } while (true);
+
+                    otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleQualitySpecification832); 
+
+                        	newLeafNode(otherlv_3, grammarAccess.getQualitySpecificationAccess().getRightCurlyBracketKeyword_1_2());
+                        
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -969,13 +987,13 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
             // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:380:2: iv_ruleEntity= ruleEntity EOF
             {
              newCompositeNode(grammarAccess.getEntityRule()); 
-            pushFollow(FOLLOW_ruleEntity_in_entryRuleEntity867);
+            pushFollow(FOLLOW_ruleEntity_in_entryRuleEntity870);
             iv_ruleEntity=ruleEntity();
 
             state._fsp--;
 
              current =iv_ruleEntity; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEntity877); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEntity880); 
 
             }
 
@@ -1011,38 +1029,38 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
             // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:391:1: (this_Set__0= ruleSet_ | this_Struct__1= ruleStruct_ | this_Relationship__2= ruleRelationship_ )
             {
             // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:391:1: (this_Set__0= ruleSet_ | this_Struct__1= ruleStruct_ | this_Relationship__2= ruleRelationship_ )
-            int alt8=3;
+            int alt9=3;
             switch ( input.LA(1) ) {
             case 30:
                 {
-                alt8=1;
-                }
-                break;
-            case 34:
-                {
-                alt8=2;
+                alt9=1;
                 }
                 break;
             case 35:
                 {
-                alt8=3;
+                alt9=2;
+                }
+                break;
+            case 36:
+                {
+                alt9=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
+                    new NoViableAltException("", 9, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
                     // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:392:5: this_Set__0= ruleSet_
                     {
                      
                             newCompositeNode(grammarAccess.getEntityAccess().getSet_ParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSet__in_ruleEntity924);
+                    pushFollow(FOLLOW_ruleSet__in_ruleEntity927);
                     this_Set__0=ruleSet_();
 
                     state._fsp--;
@@ -1060,7 +1078,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getEntityAccess().getStruct_ParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleStruct__in_ruleEntity951);
+                    pushFollow(FOLLOW_ruleStruct__in_ruleEntity954);
                     this_Struct__1=ruleStruct_();
 
                     state._fsp--;
@@ -1078,7 +1096,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getEntityAccess().getRelationship_ParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleRelationship__in_ruleEntity978);
+                    pushFollow(FOLLOW_ruleRelationship__in_ruleEntity981);
                     this_Relationship__2=ruleRelationship_();
 
                     state._fsp--;
@@ -1123,13 +1141,13 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
             // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:430:2: iv_ruleSet_= ruleSet_ EOF
             {
              newCompositeNode(grammarAccess.getSet_Rule()); 
-            pushFollow(FOLLOW_ruleSet__in_entryRuleSet_1013);
+            pushFollow(FOLLOW_ruleSet__in_entryRuleSet_1016);
             iv_ruleSet_=ruleSet_();
 
             state._fsp--;
 
              current =iv_ruleSet_; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSet_1023); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSet_1026); 
 
             }
 
@@ -1147,7 +1165,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSet_"
-    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:437:1: ruleSet_ returns [EObject current=null] : (otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '<' ( (lv_dataModel_6_0= ruleDataModel ) ) otherlv_7= '>' )? (otherlv_8= '{' ( (lv_entities_9_0= ruleEntity ) )* otherlv_10= ',' ( (lv_qualitySpecifications_11_0= ruleQualitySpecification ) )* otherlv_12= '}' )? ) ;
+    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:437:1: ruleSet_ returns [EObject current=null] : (otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '<' ( (lv_dataModel_3_0= ruleDataModel ) ) otherlv_4= '>' )? (otherlv_5= '#' ( (lv_qualitySpecifications_6_0= ruleQualitySpecification ) )* otherlv_7= '#' )? (otherlv_8= '[' ( (lv_attributes_9_0= ruleAttribute ) )* otherlv_10= ']' )? (otherlv_11= '{' ( (lv_entities_12_0= ruleEntity ) )* otherlv_13= '}' )? (otherlv_14= ',' )? ) ;
     public final EObject ruleSet_() throws RecognitionException {
         EObject current = null;
 
@@ -1159,26 +1177,28 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
         Token otherlv_7=null;
         Token otherlv_8=null;
         Token otherlv_10=null;
-        Token otherlv_12=null;
-        EObject lv_attributes_3_0 = null;
+        Token otherlv_11=null;
+        Token otherlv_13=null;
+        Token otherlv_14=null;
+        AntlrDatatypeRuleToken lv_dataModel_3_0 = null;
 
-        AntlrDatatypeRuleToken lv_dataModel_6_0 = null;
+        EObject lv_qualitySpecifications_6_0 = null;
 
-        EObject lv_entities_9_0 = null;
+        EObject lv_attributes_9_0 = null;
 
-        EObject lv_qualitySpecifications_11_0 = null;
+        EObject lv_entities_12_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:440:28: ( (otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '<' ( (lv_dataModel_6_0= ruleDataModel ) ) otherlv_7= '>' )? (otherlv_8= '{' ( (lv_entities_9_0= ruleEntity ) )* otherlv_10= ',' ( (lv_qualitySpecifications_11_0= ruleQualitySpecification ) )* otherlv_12= '}' )? ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:441:1: (otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '<' ( (lv_dataModel_6_0= ruleDataModel ) ) otherlv_7= '>' )? (otherlv_8= '{' ( (lv_entities_9_0= ruleEntity ) )* otherlv_10= ',' ( (lv_qualitySpecifications_11_0= ruleQualitySpecification ) )* otherlv_12= '}' )? )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:440:28: ( (otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '<' ( (lv_dataModel_3_0= ruleDataModel ) ) otherlv_4= '>' )? (otherlv_5= '#' ( (lv_qualitySpecifications_6_0= ruleQualitySpecification ) )* otherlv_7= '#' )? (otherlv_8= '[' ( (lv_attributes_9_0= ruleAttribute ) )* otherlv_10= ']' )? (otherlv_11= '{' ( (lv_entities_12_0= ruleEntity ) )* otherlv_13= '}' )? (otherlv_14= ',' )? ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:441:1: (otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '<' ( (lv_dataModel_3_0= ruleDataModel ) ) otherlv_4= '>' )? (otherlv_5= '#' ( (lv_qualitySpecifications_6_0= ruleQualitySpecification ) )* otherlv_7= '#' )? (otherlv_8= '[' ( (lv_attributes_9_0= ruleAttribute ) )* otherlv_10= ']' )? (otherlv_11= '{' ( (lv_entities_12_0= ruleEntity ) )* otherlv_13= '}' )? (otherlv_14= ',' )? )
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:441:1: (otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '<' ( (lv_dataModel_6_0= ruleDataModel ) ) otherlv_7= '>' )? (otherlv_8= '{' ( (lv_entities_9_0= ruleEntity ) )* otherlv_10= ',' ( (lv_qualitySpecifications_11_0= ruleQualitySpecification ) )* otherlv_12= '}' )? )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:441:3: otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '<' ( (lv_dataModel_6_0= ruleDataModel ) ) otherlv_7= '>' )? (otherlv_8= '{' ( (lv_entities_9_0= ruleEntity ) )* otherlv_10= ',' ( (lv_qualitySpecifications_11_0= ruleQualitySpecification ) )* otherlv_12= '}' )?
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:441:1: (otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '<' ( (lv_dataModel_3_0= ruleDataModel ) ) otherlv_4= '>' )? (otherlv_5= '#' ( (lv_qualitySpecifications_6_0= ruleQualitySpecification ) )* otherlv_7= '#' )? (otherlv_8= '[' ( (lv_attributes_9_0= ruleAttribute ) )* otherlv_10= ']' )? (otherlv_11= '{' ( (lv_entities_12_0= ruleEntity ) )* otherlv_13= '}' )? (otherlv_14= ',' )? )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:441:3: otherlv_0= 'Set' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '<' ( (lv_dataModel_3_0= ruleDataModel ) ) otherlv_4= '>' )? (otherlv_5= '#' ( (lv_qualitySpecifications_6_0= ruleQualitySpecification ) )* otherlv_7= '#' )? (otherlv_8= '[' ( (lv_attributes_9_0= ruleAttribute ) )* otherlv_10= ']' )? (otherlv_11= '{' ( (lv_entities_12_0= ruleEntity ) )* otherlv_13= '}' )? (otherlv_14= ',' )?
             {
-            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleSet_1060); 
+            otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleSet_1063); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSet_Access().getSetKeyword_0());
                 
@@ -1188,7 +1208,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
             // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:446:1: (lv_name_1_0= RULE_ID )
             // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:447:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSet_1077); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSet_1080); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getSet_Access().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1208,106 +1228,32 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:463:2: (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )?
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:463:2: (otherlv_2= '<' ( (lv_dataModel_3_0= ruleDataModel ) ) otherlv_4= '>' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==11) ) {
+            if ( (LA10_0==31) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:463:4: otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']'
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:463:4: otherlv_2= '<' ( (lv_dataModel_3_0= ruleDataModel ) ) otherlv_4= '>'
                     {
-                    otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleSet_1095); 
+                    otherlv_2=(Token)match(input,31,FOLLOW_31_in_ruleSet_1098); 
 
-                        	newLeafNode(otherlv_2, grammarAccess.getSet_Access().getLeftSquareBracketKeyword_2_0());
+                        	newLeafNode(otherlv_2, grammarAccess.getSet_Access().getLessThanSignKeyword_2_0());
                         
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:467:1: ( (lv_attributes_3_0= ruleAttribute ) )*
-                    loop9:
-                    do {
-                        int alt9=2;
-                        int LA9_0 = input.LA(1);
-
-                        if ( (LA9_0==RULE_ID) ) {
-                            alt9=1;
-                        }
-
-
-                        switch (alt9) {
-                    	case 1 :
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:468:1: (lv_attributes_3_0= ruleAttribute )
-                    	    {
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:468:1: (lv_attributes_3_0= ruleAttribute )
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:469:3: lv_attributes_3_0= ruleAttribute
-                    	    {
-                    	     
-                    	    	        newCompositeNode(grammarAccess.getSet_Access().getAttributesAttributeParserRuleCall_2_1_0()); 
-                    	    	    
-                    	    pushFollow(FOLLOW_ruleAttribute_in_ruleSet_1116);
-                    	    lv_attributes_3_0=ruleAttribute();
-
-                    	    state._fsp--;
-
-
-                    	    	        if (current==null) {
-                    	    	            current = createModelElementForParent(grammarAccess.getSet_Rule());
-                    	    	        }
-                    	           		add(
-                    	           			current, 
-                    	           			"attributes",
-                    	            		lv_attributes_3_0, 
-                    	            		"Attribute");
-                    	    	        afterParserOrEnumRuleCall();
-                    	    	    
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop9;
-                        }
-                    } while (true);
-
-                    otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleSet_1129); 
-
-                        	newLeafNode(otherlv_4, grammarAccess.getSet_Access().getRightSquareBracketKeyword_2_2());
-                        
-
-                    }
-                    break;
-
-            }
-
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:489:3: (otherlv_5= '<' ( (lv_dataModel_6_0= ruleDataModel ) ) otherlv_7= '>' )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
-
-            if ( (LA11_0==31) ) {
-                alt11=1;
-            }
-            switch (alt11) {
-                case 1 :
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:489:5: otherlv_5= '<' ( (lv_dataModel_6_0= ruleDataModel ) ) otherlv_7= '>'
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:467:1: ( (lv_dataModel_3_0= ruleDataModel ) )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:468:1: (lv_dataModel_3_0= ruleDataModel )
                     {
-                    otherlv_5=(Token)match(input,31,FOLLOW_31_in_ruleSet_1144); 
-
-                        	newLeafNode(otherlv_5, grammarAccess.getSet_Access().getLessThanSignKeyword_3_0());
-                        
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:493:1: ( (lv_dataModel_6_0= ruleDataModel ) )
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:494:1: (lv_dataModel_6_0= ruleDataModel )
-                    {
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:494:1: (lv_dataModel_6_0= ruleDataModel )
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:495:3: lv_dataModel_6_0= ruleDataModel
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:468:1: (lv_dataModel_3_0= ruleDataModel )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:469:3: lv_dataModel_3_0= ruleDataModel
                     {
                      
-                    	        newCompositeNode(grammarAccess.getSet_Access().getDataModelDataModelParserRuleCall_3_1_0()); 
+                    	        newCompositeNode(grammarAccess.getSet_Access().getDataModelDataModelParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleDataModel_in_ruleSet_1165);
-                    lv_dataModel_6_0=ruleDataModel();
+                    pushFollow(FOLLOW_ruleDataModel_in_ruleSet_1119);
+                    lv_dataModel_3_0=ruleDataModel();
 
                     state._fsp--;
 
@@ -1318,7 +1264,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"dataModel",
-                            		lv_dataModel_6_0, 
+                            		lv_dataModel_3_0, 
                             		"DataModel");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -1328,9 +1274,9 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,32,FOLLOW_32_in_ruleSet_1177); 
+                    otherlv_4=(Token)match(input,32,FOLLOW_32_in_ruleSet_1131); 
 
-                        	newLeafNode(otherlv_7, grammarAccess.getSet_Access().getGreaterThanSignKeyword_3_2());
+                        	newLeafNode(otherlv_4, grammarAccess.getSet_Access().getGreaterThanSignKeyword_2_2());
                         
 
                     }
@@ -1338,97 +1284,44 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:515:3: (otherlv_8= '{' ( (lv_entities_9_0= ruleEntity ) )* otherlv_10= ',' ( (lv_qualitySpecifications_11_0= ruleQualitySpecification ) )* otherlv_12= '}' )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:489:3: (otherlv_5= '#' ( (lv_qualitySpecifications_6_0= ruleQualitySpecification ) )* otherlv_7= '#' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA14_0==28) ) {
-                alt14=1;
+            if ( (LA12_0==33) ) {
+                alt12=1;
             }
-            switch (alt14) {
+            switch (alt12) {
                 case 1 :
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:515:5: otherlv_8= '{' ( (lv_entities_9_0= ruleEntity ) )* otherlv_10= ',' ( (lv_qualitySpecifications_11_0= ruleQualitySpecification ) )* otherlv_12= '}'
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:489:5: otherlv_5= '#' ( (lv_qualitySpecifications_6_0= ruleQualitySpecification ) )* otherlv_7= '#'
                     {
-                    otherlv_8=(Token)match(input,28,FOLLOW_28_in_ruleSet_1192); 
+                    otherlv_5=(Token)match(input,33,FOLLOW_33_in_ruleSet_1146); 
 
-                        	newLeafNode(otherlv_8, grammarAccess.getSet_Access().getLeftCurlyBracketKeyword_4_0());
+                        	newLeafNode(otherlv_5, grammarAccess.getSet_Access().getNumberSignKeyword_3_0());
                         
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:519:1: ( (lv_entities_9_0= ruleEntity ) )*
-                    loop12:
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:493:1: ( (lv_qualitySpecifications_6_0= ruleQualitySpecification ) )*
+                    loop11:
                     do {
-                        int alt12=2;
-                        int LA12_0 = input.LA(1);
+                        int alt11=2;
+                        int LA11_0 = input.LA(1);
 
-                        if ( (LA12_0==30||(LA12_0>=34 && LA12_0<=35)) ) {
-                            alt12=1;
+                        if ( (LA11_0==18) ) {
+                            alt11=1;
                         }
 
 
-                        switch (alt12) {
+                        switch (alt11) {
                     	case 1 :
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:520:1: (lv_entities_9_0= ruleEntity )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:494:1: (lv_qualitySpecifications_6_0= ruleQualitySpecification )
                     	    {
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:520:1: (lv_entities_9_0= ruleEntity )
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:521:3: lv_entities_9_0= ruleEntity
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:494:1: (lv_qualitySpecifications_6_0= ruleQualitySpecification )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:495:3: lv_qualitySpecifications_6_0= ruleQualitySpecification
                     	    {
                     	     
-                    	    	        newCompositeNode(grammarAccess.getSet_Access().getEntitiesEntityParserRuleCall_4_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getSet_Access().getQualitySpecificationsQualitySpecificationParserRuleCall_3_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleEntity_in_ruleSet_1213);
-                    	    lv_entities_9_0=ruleEntity();
-
-                    	    state._fsp--;
-
-
-                    	    	        if (current==null) {
-                    	    	            current = createModelElementForParent(grammarAccess.getSet_Rule());
-                    	    	        }
-                    	           		add(
-                    	           			current, 
-                    	           			"entities",
-                    	            		lv_entities_9_0, 
-                    	            		"Entity");
-                    	    	        afterParserOrEnumRuleCall();
-                    	    	    
-
-                    	    }
-
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop12;
-                        }
-                    } while (true);
-
-                    otherlv_10=(Token)match(input,33,FOLLOW_33_in_ruleSet_1226); 
-
-                        	newLeafNode(otherlv_10, grammarAccess.getSet_Access().getCommaKeyword_4_2());
-                        
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:541:1: ( (lv_qualitySpecifications_11_0= ruleQualitySpecification ) )*
-                    loop13:
-                    do {
-                        int alt13=2;
-                        int LA13_0 = input.LA(1);
-
-                        if ( (LA13_0==18) ) {
-                            alt13=1;
-                        }
-
-
-                        switch (alt13) {
-                    	case 1 :
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:542:1: (lv_qualitySpecifications_11_0= ruleQualitySpecification )
-                    	    {
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:542:1: (lv_qualitySpecifications_11_0= ruleQualitySpecification )
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:543:3: lv_qualitySpecifications_11_0= ruleQualitySpecification
-                    	    {
-                    	     
-                    	    	        newCompositeNode(grammarAccess.getSet_Access().getQualitySpecificationsQualitySpecificationParserRuleCall_4_3_0()); 
-                    	    	    
-                    	    pushFollow(FOLLOW_ruleQualitySpecification_in_ruleSet_1247);
-                    	    lv_qualitySpecifications_11_0=ruleQualitySpecification();
+                    	    pushFollow(FOLLOW_ruleQualitySpecification_in_ruleSet_1167);
+                    	    lv_qualitySpecifications_6_0=ruleQualitySpecification();
 
                     	    state._fsp--;
 
@@ -1439,8 +1332,82 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                     	           		add(
                     	           			current, 
                     	           			"qualitySpecifications",
-                    	            		lv_qualitySpecifications_11_0, 
+                    	            		lv_qualitySpecifications_6_0, 
                     	            		"QualitySpecification");
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop11;
+                        }
+                    } while (true);
+
+                    otherlv_7=(Token)match(input,33,FOLLOW_33_in_ruleSet_1180); 
+
+                        	newLeafNode(otherlv_7, grammarAccess.getSet_Access().getNumberSignKeyword_3_2());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:515:3: (otherlv_8= '[' ( (lv_attributes_9_0= ruleAttribute ) )* otherlv_10= ']' )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
+
+            if ( (LA14_0==11) ) {
+                alt14=1;
+            }
+            switch (alt14) {
+                case 1 :
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:515:5: otherlv_8= '[' ( (lv_attributes_9_0= ruleAttribute ) )* otherlv_10= ']'
+                    {
+                    otherlv_8=(Token)match(input,11,FOLLOW_11_in_ruleSet_1195); 
+
+                        	newLeafNode(otherlv_8, grammarAccess.getSet_Access().getLeftSquareBracketKeyword_4_0());
+                        
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:519:1: ( (lv_attributes_9_0= ruleAttribute ) )*
+                    loop13:
+                    do {
+                        int alt13=2;
+                        int LA13_0 = input.LA(1);
+
+                        if ( (LA13_0==RULE_ID) ) {
+                            alt13=1;
+                        }
+
+
+                        switch (alt13) {
+                    	case 1 :
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:520:1: (lv_attributes_9_0= ruleAttribute )
+                    	    {
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:520:1: (lv_attributes_9_0= ruleAttribute )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:521:3: lv_attributes_9_0= ruleAttribute
+                    	    {
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getSet_Access().getAttributesAttributeParserRuleCall_4_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleAttribute_in_ruleSet_1216);
+                    	    lv_attributes_9_0=ruleAttribute();
+
+                    	    state._fsp--;
+
+
+                    	    	        if (current==null) {
+                    	    	            current = createModelElementForParent(grammarAccess.getSet_Rule());
+                    	    	        }
+                    	           		add(
+                    	           			current, 
+                    	           			"attributes",
+                    	            		lv_attributes_9_0, 
+                    	            		"Attribute");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -1455,9 +1422,104 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_12=(Token)match(input,29,FOLLOW_29_in_ruleSet_1260); 
+                    otherlv_10=(Token)match(input,12,FOLLOW_12_in_ruleSet_1229); 
 
-                        	newLeafNode(otherlv_12, grammarAccess.getSet_Access().getRightCurlyBracketKeyword_4_4());
+                        	newLeafNode(otherlv_10, grammarAccess.getSet_Access().getRightSquareBracketKeyword_4_2());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:541:3: (otherlv_11= '{' ( (lv_entities_12_0= ruleEntity ) )* otherlv_13= '}' )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
+
+            if ( (LA16_0==28) ) {
+                alt16=1;
+            }
+            switch (alt16) {
+                case 1 :
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:541:5: otherlv_11= '{' ( (lv_entities_12_0= ruleEntity ) )* otherlv_13= '}'
+                    {
+                    otherlv_11=(Token)match(input,28,FOLLOW_28_in_ruleSet_1244); 
+
+                        	newLeafNode(otherlv_11, grammarAccess.getSet_Access().getLeftCurlyBracketKeyword_5_0());
+                        
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:545:1: ( (lv_entities_12_0= ruleEntity ) )*
+                    loop15:
+                    do {
+                        int alt15=2;
+                        int LA15_0 = input.LA(1);
+
+                        if ( (LA15_0==30||(LA15_0>=35 && LA15_0<=36)) ) {
+                            alt15=1;
+                        }
+
+
+                        switch (alt15) {
+                    	case 1 :
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:546:1: (lv_entities_12_0= ruleEntity )
+                    	    {
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:546:1: (lv_entities_12_0= ruleEntity )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:547:3: lv_entities_12_0= ruleEntity
+                    	    {
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getSet_Access().getEntitiesEntityParserRuleCall_5_1_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleEntity_in_ruleSet_1265);
+                    	    lv_entities_12_0=ruleEntity();
+
+                    	    state._fsp--;
+
+
+                    	    	        if (current==null) {
+                    	    	            current = createModelElementForParent(grammarAccess.getSet_Rule());
+                    	    	        }
+                    	           		add(
+                    	           			current, 
+                    	           			"entities",
+                    	            		lv_entities_12_0, 
+                    	            		"Entity");
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop15;
+                        }
+                    } while (true);
+
+                    otherlv_13=(Token)match(input,29,FOLLOW_29_in_ruleSet_1278); 
+
+                        	newLeafNode(otherlv_13, grammarAccess.getSet_Access().getRightCurlyBracketKeyword_5_2());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:567:3: (otherlv_14= ',' )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
+
+            if ( (LA17_0==34) ) {
+                alt17=1;
+            }
+            switch (alt17) {
+                case 1 :
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:567:5: otherlv_14= ','
+                    {
+                    otherlv_14=(Token)match(input,34,FOLLOW_34_in_ruleSet_1293); 
+
+                        	newLeafNode(otherlv_14, grammarAccess.getSet_Access().getCommaKeyword_6());
                         
 
                     }
@@ -1486,7 +1548,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStruct_"
-    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:571:1: entryRuleStruct_ returns [EObject current=null] : iv_ruleStruct_= ruleStruct_ EOF ;
+    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:579:1: entryRuleStruct_ returns [EObject current=null] : iv_ruleStruct_= ruleStruct_ EOF ;
     public final EObject entryRuleStruct_() throws RecognitionException {
         EObject current = null;
 
@@ -1494,17 +1556,17 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:572:2: (iv_ruleStruct_= ruleStruct_ EOF )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:573:2: iv_ruleStruct_= ruleStruct_ EOF
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:580:2: (iv_ruleStruct_= ruleStruct_ EOF )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:581:2: iv_ruleStruct_= ruleStruct_ EOF
             {
              newCompositeNode(grammarAccess.getStruct_Rule()); 
-            pushFollow(FOLLOW_ruleStruct__in_entryRuleStruct_1298);
+            pushFollow(FOLLOW_ruleStruct__in_entryRuleStruct_1331);
             iv_ruleStruct_=ruleStruct_();
 
             state._fsp--;
 
              current =iv_ruleStruct_; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStruct_1308); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStruct_1341); 
 
             }
 
@@ -1522,7 +1584,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStruct_"
-    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:580:1: ruleStruct_ returns [EObject current=null] : (otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? ) ;
+    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:588:1: ruleStruct_ returns [EObject current=null] : (otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? (otherlv_8= ',' )? ) ;
     public final EObject ruleStruct_() throws RecognitionException {
         EObject current = null;
 
@@ -1532,6 +1594,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
         Token otherlv_4=null;
         Token otherlv_5=null;
         Token otherlv_7=null;
+        Token otherlv_8=null;
         EObject lv_attributes_3_0 = null;
 
         EObject lv_entities_6_0 = null;
@@ -1540,23 +1603,23 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:583:28: ( (otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:584:1: (otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:591:28: ( (otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? (otherlv_8= ',' )? ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:592:1: (otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? (otherlv_8= ',' )? )
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:584:1: (otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:584:3: otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )?
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:592:1: (otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? (otherlv_8= ',' )? )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:592:3: otherlv_0= 'Struct' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )? (otherlv_8= ',' )?
             {
-            otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleStruct_1345); 
+            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleStruct_1378); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getStruct_Access().getStructKeyword_0());
                 
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:588:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:589:1: (lv_name_1_0= RULE_ID )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:596:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:597:1: (lv_name_1_0= RULE_ID )
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:589:1: (lv_name_1_0= RULE_ID )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:590:3: lv_name_1_0= RULE_ID
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:597:1: (lv_name_1_0= RULE_ID )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:598:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStruct_1362); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleStruct_1395); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getStruct_Access().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1576,43 +1639,43 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:606:2: (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:614:2: (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA16_0==11) ) {
-                alt16=1;
+            if ( (LA19_0==11) ) {
+                alt19=1;
             }
-            switch (alt16) {
+            switch (alt19) {
                 case 1 :
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:606:4: otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']'
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:614:4: otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']'
                     {
-                    otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleStruct_1380); 
+                    otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleStruct_1413); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getStruct_Access().getLeftSquareBracketKeyword_2_0());
                         
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:610:1: ( (lv_attributes_3_0= ruleAttribute ) )*
-                    loop15:
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:618:1: ( (lv_attributes_3_0= ruleAttribute ) )*
+                    loop18:
                     do {
-                        int alt15=2;
-                        int LA15_0 = input.LA(1);
+                        int alt18=2;
+                        int LA18_0 = input.LA(1);
 
-                        if ( (LA15_0==RULE_ID) ) {
-                            alt15=1;
+                        if ( (LA18_0==RULE_ID) ) {
+                            alt18=1;
                         }
 
 
-                        switch (alt15) {
+                        switch (alt18) {
                     	case 1 :
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:611:1: (lv_attributes_3_0= ruleAttribute )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:619:1: (lv_attributes_3_0= ruleAttribute )
                     	    {
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:611:1: (lv_attributes_3_0= ruleAttribute )
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:612:3: lv_attributes_3_0= ruleAttribute
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:619:1: (lv_attributes_3_0= ruleAttribute )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:620:3: lv_attributes_3_0= ruleAttribute
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getStruct_Access().getAttributesAttributeParserRuleCall_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleAttribute_in_ruleStruct_1401);
+                    	    pushFollow(FOLLOW_ruleAttribute_in_ruleStruct_1434);
                     	    lv_attributes_3_0=ruleAttribute();
 
                     	    state._fsp--;
@@ -1636,11 +1699,11 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop15;
+                    	    break loop18;
                         }
                     } while (true);
 
-                    otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleStruct_1414); 
+                    otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleStruct_1447); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getStruct_Access().getRightSquareBracketKeyword_2_2());
                         
@@ -1650,43 +1713,43 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:632:3: (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:640:3: (otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}' )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA18_0==28) ) {
-                alt18=1;
+            if ( (LA21_0==28) ) {
+                alt21=1;
             }
-            switch (alt18) {
+            switch (alt21) {
                 case 1 :
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:632:5: otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}'
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:640:5: otherlv_5= '{' ( (lv_entities_6_0= ruleEntity ) )* otherlv_7= '}'
                     {
-                    otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleStruct_1429); 
+                    otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleStruct_1462); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getStruct_Access().getLeftCurlyBracketKeyword_3_0());
                         
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:636:1: ( (lv_entities_6_0= ruleEntity ) )*
-                    loop17:
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:644:1: ( (lv_entities_6_0= ruleEntity ) )*
+                    loop20:
                     do {
-                        int alt17=2;
-                        int LA17_0 = input.LA(1);
+                        int alt20=2;
+                        int LA20_0 = input.LA(1);
 
-                        if ( (LA17_0==30||(LA17_0>=34 && LA17_0<=35)) ) {
-                            alt17=1;
+                        if ( (LA20_0==30||(LA20_0>=35 && LA20_0<=36)) ) {
+                            alt20=1;
                         }
 
 
-                        switch (alt17) {
+                        switch (alt20) {
                     	case 1 :
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:637:1: (lv_entities_6_0= ruleEntity )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:645:1: (lv_entities_6_0= ruleEntity )
                     	    {
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:637:1: (lv_entities_6_0= ruleEntity )
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:638:3: lv_entities_6_0= ruleEntity
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:645:1: (lv_entities_6_0= ruleEntity )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:646:3: lv_entities_6_0= ruleEntity
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getStruct_Access().getEntitiesEntityParserRuleCall_3_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleEntity_in_ruleStruct_1450);
+                    	    pushFollow(FOLLOW_ruleEntity_in_ruleStruct_1483);
                     	    lv_entities_6_0=ruleEntity();
 
                     	    state._fsp--;
@@ -1710,13 +1773,34 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop17;
+                    	    break loop20;
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,29,FOLLOW_29_in_ruleStruct_1463); 
+                    otherlv_7=(Token)match(input,29,FOLLOW_29_in_ruleStruct_1496); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getStruct_Access().getRightCurlyBracketKeyword_3_2());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:666:3: (otherlv_8= ',' )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
+
+            if ( (LA22_0==34) ) {
+                alt22=1;
+            }
+            switch (alt22) {
+                case 1 :
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:666:5: otherlv_8= ','
+                    {
+                    otherlv_8=(Token)match(input,34,FOLLOW_34_in_ruleStruct_1511); 
+
+                        	newLeafNode(otherlv_8, grammarAccess.getStruct_Access().getCommaKeyword_4());
                         
 
                     }
@@ -1745,7 +1829,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRelationship_"
-    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:666:1: entryRuleRelationship_ returns [EObject current=null] : iv_ruleRelationship_= ruleRelationship_ EOF ;
+    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:678:1: entryRuleRelationship_ returns [EObject current=null] : iv_ruleRelationship_= ruleRelationship_ EOF ;
     public final EObject entryRuleRelationship_() throws RecognitionException {
         EObject current = null;
 
@@ -1753,17 +1837,17 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:667:2: (iv_ruleRelationship_= ruleRelationship_ EOF )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:668:2: iv_ruleRelationship_= ruleRelationship_ EOF
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:679:2: (iv_ruleRelationship_= ruleRelationship_ EOF )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:680:2: iv_ruleRelationship_= ruleRelationship_ EOF
             {
              newCompositeNode(grammarAccess.getRelationship_Rule()); 
-            pushFollow(FOLLOW_ruleRelationship__in_entryRuleRelationship_1501);
+            pushFollow(FOLLOW_ruleRelationship__in_entryRuleRelationship_1549);
             iv_ruleRelationship_=ruleRelationship_();
 
             state._fsp--;
 
              current =iv_ruleRelationship_; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRelationship_1511); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRelationship_1559); 
 
             }
 
@@ -1781,7 +1865,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRelationship_"
-    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:675:1: ruleRelationship_ returns [EObject current=null] : (otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? ) ;
+    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:687:1: ruleRelationship_ returns [EObject current=null] : (otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? (otherlv_13= ',' )? ) ;
     public final EObject ruleRelationship_() throws RecognitionException {
         EObject current = null;
 
@@ -1797,29 +1881,30 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
         Token otherlv_10=null;
         Token lv_end_11_0=null;
         Token otherlv_12=null;
+        Token otherlv_13=null;
         EObject lv_attributes_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:678:28: ( (otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:679:1: (otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:690:28: ( (otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? (otherlv_13= ',' )? ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:691:1: (otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? (otherlv_13= ',' )? )
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:679:1: (otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:679:3: otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )?
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:691:1: (otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? (otherlv_13= ',' )? )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:691:3: otherlv_0= 'Relationship' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )? (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )? (otherlv_13= ',' )?
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleRelationship_1548); 
+            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleRelationship_1596); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getRelationship_Access().getRelationshipKeyword_0());
                 
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:683:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:684:1: (lv_name_1_0= RULE_ID )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:695:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:696:1: (lv_name_1_0= RULE_ID )
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:684:1: (lv_name_1_0= RULE_ID )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:685:3: lv_name_1_0= RULE_ID
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:696:1: (lv_name_1_0= RULE_ID )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:697:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship_1565); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship_1613); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getRelationship_Access().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1839,43 +1924,43 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:701:2: (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:713:2: (otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']' )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA20_0==11) ) {
-                alt20=1;
+            if ( (LA24_0==11) ) {
+                alt24=1;
             }
-            switch (alt20) {
+            switch (alt24) {
                 case 1 :
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:701:4: otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']'
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:713:4: otherlv_2= '[' ( (lv_attributes_3_0= ruleAttribute ) )* otherlv_4= ']'
                     {
-                    otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleRelationship_1583); 
+                    otherlv_2=(Token)match(input,11,FOLLOW_11_in_ruleRelationship_1631); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getRelationship_Access().getLeftSquareBracketKeyword_2_0());
                         
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:705:1: ( (lv_attributes_3_0= ruleAttribute ) )*
-                    loop19:
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:717:1: ( (lv_attributes_3_0= ruleAttribute ) )*
+                    loop23:
                     do {
-                        int alt19=2;
-                        int LA19_0 = input.LA(1);
+                        int alt23=2;
+                        int LA23_0 = input.LA(1);
 
-                        if ( (LA19_0==RULE_ID) ) {
-                            alt19=1;
+                        if ( (LA23_0==RULE_ID) ) {
+                            alt23=1;
                         }
 
 
-                        switch (alt19) {
+                        switch (alt23) {
                     	case 1 :
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:706:1: (lv_attributes_3_0= ruleAttribute )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:718:1: (lv_attributes_3_0= ruleAttribute )
                     	    {
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:706:1: (lv_attributes_3_0= ruleAttribute )
-                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:707:3: lv_attributes_3_0= ruleAttribute
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:718:1: (lv_attributes_3_0= ruleAttribute )
+                    	    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:719:3: lv_attributes_3_0= ruleAttribute
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getRelationship_Access().getAttributesAttributeParserRuleCall_2_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleAttribute_in_ruleRelationship_1604);
+                    	    pushFollow(FOLLOW_ruleAttribute_in_ruleRelationship_1652);
                     	    lv_attributes_3_0=ruleAttribute();
 
                     	    state._fsp--;
@@ -1899,11 +1984,11 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop19;
+                    	    break loop23;
                         }
                     } while (true);
 
-                    otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleRelationship_1617); 
+                    otherlv_4=(Token)match(input,12,FOLLOW_12_in_ruleRelationship_1665); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getRelationship_Access().getRightSquareBracketKeyword_2_2());
                         
@@ -1913,36 +1998,36 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:727:3: (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:739:3: (otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}' )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA21_0==28) ) {
-                alt21=1;
+            if ( (LA25_0==28) ) {
+                alt25=1;
             }
-            switch (alt21) {
+            switch (alt25) {
                 case 1 :
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:727:5: otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}'
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:739:5: otherlv_5= '{' otherlv_6= 'start' otherlv_7= '=' ( (lv_start_8_0= RULE_ID ) ) otherlv_9= 'end' otherlv_10= '=' ( (lv_end_11_0= RULE_ID ) ) otherlv_12= '}'
                     {
-                    otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleRelationship_1632); 
+                    otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleRelationship_1680); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getRelationship_Access().getLeftCurlyBracketKeyword_3_0());
                         
-                    otherlv_6=(Token)match(input,36,FOLLOW_36_in_ruleRelationship_1644); 
+                    otherlv_6=(Token)match(input,37,FOLLOW_37_in_ruleRelationship_1692); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getRelationship_Access().getStartKeyword_3_1());
                         
-                    otherlv_7=(Token)match(input,37,FOLLOW_37_in_ruleRelationship_1656); 
+                    otherlv_7=(Token)match(input,38,FOLLOW_38_in_ruleRelationship_1704); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getRelationship_Access().getEqualsSignKeyword_3_2());
                         
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:739:1: ( (lv_start_8_0= RULE_ID ) )
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:740:1: (lv_start_8_0= RULE_ID )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:751:1: ( (lv_start_8_0= RULE_ID ) )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:752:1: (lv_start_8_0= RULE_ID )
                     {
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:740:1: (lv_start_8_0= RULE_ID )
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:741:3: lv_start_8_0= RULE_ID
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:752:1: (lv_start_8_0= RULE_ID )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:753:3: lv_start_8_0= RULE_ID
                     {
-                    lv_start_8_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship_1673); 
+                    lv_start_8_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship_1721); 
 
                     			newLeafNode(lv_start_8_0, grammarAccess.getRelationship_Access().getStartIDTerminalRuleCall_3_3_0()); 
                     		
@@ -1962,21 +2047,21 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,38,FOLLOW_38_in_ruleRelationship_1690); 
+                    otherlv_9=(Token)match(input,39,FOLLOW_39_in_ruleRelationship_1738); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getRelationship_Access().getEndKeyword_3_4());
                         
-                    otherlv_10=(Token)match(input,37,FOLLOW_37_in_ruleRelationship_1702); 
+                    otherlv_10=(Token)match(input,38,FOLLOW_38_in_ruleRelationship_1750); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getRelationship_Access().getEqualsSignKeyword_3_5());
                         
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:765:1: ( (lv_end_11_0= RULE_ID ) )
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:766:1: (lv_end_11_0= RULE_ID )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:777:1: ( (lv_end_11_0= RULE_ID ) )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:778:1: (lv_end_11_0= RULE_ID )
                     {
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:766:1: (lv_end_11_0= RULE_ID )
-                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:767:3: lv_end_11_0= RULE_ID
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:778:1: (lv_end_11_0= RULE_ID )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:779:3: lv_end_11_0= RULE_ID
                     {
-                    lv_end_11_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship_1719); 
+                    lv_end_11_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRelationship_1767); 
 
                     			newLeafNode(lv_end_11_0, grammarAccess.getRelationship_Access().getEndIDTerminalRuleCall_3_6_0()); 
                     		
@@ -1996,9 +2081,30 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,29,FOLLOW_29_in_ruleRelationship_1736); 
+                    otherlv_12=(Token)match(input,29,FOLLOW_29_in_ruleRelationship_1784); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getRelationship_Access().getRightCurlyBracketKeyword_3_7());
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:799:3: (otherlv_13= ',' )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
+
+            if ( (LA26_0==34) ) {
+                alt26=1;
+            }
+            switch (alt26) {
+                case 1 :
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:799:5: otherlv_13= ','
+                    {
+                    otherlv_13=(Token)match(input,34,FOLLOW_34_in_ruleRelationship_1799); 
+
+                        	newLeafNode(otherlv_13, grammarAccess.getRelationship_Access().getCommaKeyword_4());
                         
 
                     }
@@ -2027,7 +2133,7 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAttribute"
-    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:795:1: entryRuleAttribute returns [EObject current=null] : iv_ruleAttribute= ruleAttribute EOF ;
+    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:811:1: entryRuleAttribute returns [EObject current=null] : iv_ruleAttribute= ruleAttribute EOF ;
     public final EObject entryRuleAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -2035,17 +2141,17 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:796:2: (iv_ruleAttribute= ruleAttribute EOF )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:797:2: iv_ruleAttribute= ruleAttribute EOF
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:812:2: (iv_ruleAttribute= ruleAttribute EOF )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:813:2: iv_ruleAttribute= ruleAttribute EOF
             {
              newCompositeNode(grammarAccess.getAttributeRule()); 
-            pushFollow(FOLLOW_ruleAttribute_in_entryRuleAttribute1774);
+            pushFollow(FOLLOW_ruleAttribute_in_entryRuleAttribute1837);
             iv_ruleAttribute=ruleAttribute();
 
             state._fsp--;
 
              current =iv_ruleAttribute; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAttribute1784); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAttribute1847); 
 
             }
 
@@ -2063,30 +2169,31 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAttribute"
-    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:804:1: ruleAttribute returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) ;
+    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:820:1: ruleAttribute returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )? (otherlv_3= ',' )? ) ;
     public final EObject ruleAttribute() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
         Token otherlv_1=null;
         Token lv_value_2_0=null;
+        Token otherlv_3=null;
 
          enterRule(); 
             
         try {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:807:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:808:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:823:28: ( ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )? (otherlv_3= ',' )? ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:824:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )? (otherlv_3= ',' )? )
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:808:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:808:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:824:1: ( ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )? (otherlv_3= ',' )? )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:824:2: ( (lv_name_0_0= RULE_ID ) ) (otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )? (otherlv_3= ',' )?
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:808:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:809:1: (lv_name_0_0= RULE_ID )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:824:2: ( (lv_name_0_0= RULE_ID ) )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:825:1: (lv_name_0_0= RULE_ID )
             {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:809:1: (lv_name_0_0= RULE_ID )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:810:3: lv_name_0_0= RULE_ID
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:825:1: (lv_name_0_0= RULE_ID )
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:826:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttribute1826); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleAttribute1889); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getAttributeAccess().getNameIDTerminalRuleCall_0_0()); 
             		
@@ -2106,33 +2213,71 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,37,FOLLOW_37_in_ruleAttribute1843); 
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:842:2: (otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) ) )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-                	newLeafNode(otherlv_1, grammarAccess.getAttributeAccess().getEqualsSignKeyword_1());
-                
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:830:1: ( (lv_value_2_0= RULE_STRING ) )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:831:1: (lv_value_2_0= RULE_STRING )
-            {
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:831:1: (lv_value_2_0= RULE_STRING )
-            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:832:3: lv_value_2_0= RULE_STRING
-            {
-            lv_value_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAttribute1860); 
+            if ( (LA27_0==38) ) {
+                alt27=1;
+            }
+            switch (alt27) {
+                case 1 :
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:842:4: otherlv_1= '=' ( (lv_value_2_0= RULE_STRING ) )
+                    {
+                    otherlv_1=(Token)match(input,38,FOLLOW_38_in_ruleAttribute1907); 
 
-            			newLeafNode(lv_value_2_0, grammarAccess.getAttributeAccess().getValueSTRINGTerminalRuleCall_2_0()); 
-            		
+                        	newLeafNode(otherlv_1, grammarAccess.getAttributeAccess().getEqualsSignKeyword_1_0());
+                        
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:846:1: ( (lv_value_2_0= RULE_STRING ) )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:847:1: (lv_value_2_0= RULE_STRING )
+                    {
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:847:1: (lv_value_2_0= RULE_STRING )
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:848:3: lv_value_2_0= RULE_STRING
+                    {
+                    lv_value_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleAttribute1924); 
 
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getAttributeRule());
-            	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"value",
-                    		lv_value_2_0, 
-                    		"STRING");
-            	    
+                    			newLeafNode(lv_value_2_0, grammarAccess.getAttributeAccess().getValueSTRINGTerminalRuleCall_1_1_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getAttributeRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"value",
+                            		lv_value_2_0, 
+                            		"STRING");
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
+            // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:864:4: (otherlv_3= ',' )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
+
+            if ( (LA28_0==34) ) {
+                alt28=1;
+            }
+            switch (alt28) {
+                case 1 :
+                    // ../fr.imag.qdbenchmark.dsl/src-gen/fr/imag/qdbenchmark/parser/antlr/internal/InternalQdBenchmarkDsl.g:864:6: otherlv_3= ','
+                    {
+                    otherlv_3=(Token)match(input,34,FOLLOW_34_in_ruleAttribute1944); 
+
+                        	newLeafNode(otherlv_3, grammarAccess.getAttributeAccess().getCommaKeyword_2());
+                        
+
+                    }
+                    break;
 
             }
 
@@ -2162,11 +2307,11 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleSchema_in_entryRuleSchema75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSchema85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSchema127 = new BitSet(new long[]{0x0000000C40000802L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSchema127 = new BitSet(new long[]{0x0000001840000802L});
     public static final BitSet FOLLOW_11_in_ruleSchema145 = new BitSet(new long[]{0x0000000000001010L});
     public static final BitSet FOLLOW_ruleAttribute_in_ruleSchema166 = new BitSet(new long[]{0x0000000000001010L});
-    public static final BitSet FOLLOW_12_in_ruleSchema179 = new BitSet(new long[]{0x0000000C40000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_ruleSchema202 = new BitSet(new long[]{0x0000000C40000002L});
+    public static final BitSet FOLLOW_12_in_ruleSchema179 = new BitSet(new long[]{0x0000001840000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_ruleSchema202 = new BitSet(new long[]{0x0000001840000002L});
     public static final BitSet FOLLOW_ruleDataModel_in_entryRuleDataModel240 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDataModel251 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_13_in_ruleDataModel289 = new BitSet(new long[]{0x0000000000000002L});
@@ -2190,59 +2335,64 @@ public class InternalQdBenchmarkDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_27_in_ruleQualitySubCharacteristic688 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleQualitySpecification_in_entryRuleQualitySpecification729 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleQualitySpecification739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualityCharacteristic_in_ruleQualitySpecification785 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleQualitySpecification797 = new BitSet(new long[]{0x0000000020200000L});
-    public static final BitSet FOLLOW_ruleQualitySubCharacteristic_in_ruleQualitySpecification818 = new BitSet(new long[]{0x0000000020200000L});
-    public static final BitSet FOLLOW_29_in_ruleQualitySpecification831 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity867 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEntity877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSet__in_ruleEntity924 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStruct__in_ruleEntity951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship__in_ruleEntity978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSet__in_entryRuleSet_1013 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSet_1023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleSet_1060 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSet_1077 = new BitSet(new long[]{0x0000000090000802L});
-    public static final BitSet FOLLOW_11_in_ruleSet_1095 = new BitSet(new long[]{0x0000000000001010L});
-    public static final BitSet FOLLOW_ruleAttribute_in_ruleSet_1116 = new BitSet(new long[]{0x0000000000001010L});
-    public static final BitSet FOLLOW_12_in_ruleSet_1129 = new BitSet(new long[]{0x0000000090000002L});
-    public static final BitSet FOLLOW_31_in_ruleSet_1144 = new BitSet(new long[]{0x000000000003E000L});
-    public static final BitSet FOLLOW_ruleDataModel_in_ruleSet_1165 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleSet_1177 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_28_in_ruleSet_1192 = new BitSet(new long[]{0x0000000E40000000L});
-    public static final BitSet FOLLOW_ruleEntity_in_ruleSet_1213 = new BitSet(new long[]{0x0000000E40000000L});
-    public static final BitSet FOLLOW_33_in_ruleSet_1226 = new BitSet(new long[]{0x0000000020040000L});
-    public static final BitSet FOLLOW_ruleQualitySpecification_in_ruleSet_1247 = new BitSet(new long[]{0x0000000020040000L});
-    public static final BitSet FOLLOW_29_in_ruleSet_1260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStruct__in_entryRuleStruct_1298 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStruct_1308 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleStruct_1345 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleStruct_1362 = new BitSet(new long[]{0x0000000010000802L});
-    public static final BitSet FOLLOW_11_in_ruleStruct_1380 = new BitSet(new long[]{0x0000000000001010L});
-    public static final BitSet FOLLOW_ruleAttribute_in_ruleStruct_1401 = new BitSet(new long[]{0x0000000000001010L});
-    public static final BitSet FOLLOW_12_in_ruleStruct_1414 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_28_in_ruleStruct_1429 = new BitSet(new long[]{0x0000000C60000000L});
-    public static final BitSet FOLLOW_ruleEntity_in_ruleStruct_1450 = new BitSet(new long[]{0x0000000C60000000L});
-    public static final BitSet FOLLOW_29_in_ruleStruct_1463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRelationship__in_entryRuleRelationship_1501 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRelationship_1511 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleRelationship_1548 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship_1565 = new BitSet(new long[]{0x0000000010000802L});
-    public static final BitSet FOLLOW_11_in_ruleRelationship_1583 = new BitSet(new long[]{0x0000000000001010L});
-    public static final BitSet FOLLOW_ruleAttribute_in_ruleRelationship_1604 = new BitSet(new long[]{0x0000000000001010L});
-    public static final BitSet FOLLOW_12_in_ruleRelationship_1617 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_28_in_ruleRelationship_1632 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleRelationship_1644 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleRelationship_1656 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship_1673 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_ruleRelationship_1690 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleRelationship_1702 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship_1719 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleRelationship_1736 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAttribute_in_entryRuleAttribute1774 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAttribute1784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleAttribute1826 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleAttribute1843 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleAttribute1860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualityCharacteristic_in_ruleQualitySpecification785 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_28_in_ruleQualitySpecification798 = new BitSet(new long[]{0x0000000020200000L});
+    public static final BitSet FOLLOW_ruleQualitySubCharacteristic_in_ruleQualitySpecification819 = new BitSet(new long[]{0x0000000020200000L});
+    public static final BitSet FOLLOW_29_in_ruleQualitySpecification832 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_entryRuleEntity870 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEntity880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSet__in_ruleEntity927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStruct__in_ruleEntity954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationship__in_ruleEntity981 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSet__in_entryRuleSet_1016 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSet_1026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleSet_1063 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSet_1080 = new BitSet(new long[]{0x0000000690000802L});
+    public static final BitSet FOLLOW_31_in_ruleSet_1098 = new BitSet(new long[]{0x000000000003E000L});
+    public static final BitSet FOLLOW_ruleDataModel_in_ruleSet_1119 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleSet_1131 = new BitSet(new long[]{0x0000000610000802L});
+    public static final BitSet FOLLOW_33_in_ruleSet_1146 = new BitSet(new long[]{0x0000000200040000L});
+    public static final BitSet FOLLOW_ruleQualitySpecification_in_ruleSet_1167 = new BitSet(new long[]{0x0000000200040000L});
+    public static final BitSet FOLLOW_33_in_ruleSet_1180 = new BitSet(new long[]{0x0000000410000802L});
+    public static final BitSet FOLLOW_11_in_ruleSet_1195 = new BitSet(new long[]{0x0000000000001010L});
+    public static final BitSet FOLLOW_ruleAttribute_in_ruleSet_1216 = new BitSet(new long[]{0x0000000000001010L});
+    public static final BitSet FOLLOW_12_in_ruleSet_1229 = new BitSet(new long[]{0x0000000410000002L});
+    public static final BitSet FOLLOW_28_in_ruleSet_1244 = new BitSet(new long[]{0x0000001860000000L});
+    public static final BitSet FOLLOW_ruleEntity_in_ruleSet_1265 = new BitSet(new long[]{0x0000001860000000L});
+    public static final BitSet FOLLOW_29_in_ruleSet_1278 = new BitSet(new long[]{0x0000000400000002L});
+    public static final BitSet FOLLOW_34_in_ruleSet_1293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStruct__in_entryRuleStruct_1331 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStruct_1341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleStruct_1378 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleStruct_1395 = new BitSet(new long[]{0x0000000410000802L});
+    public static final BitSet FOLLOW_11_in_ruleStruct_1413 = new BitSet(new long[]{0x0000000000001010L});
+    public static final BitSet FOLLOW_ruleAttribute_in_ruleStruct_1434 = new BitSet(new long[]{0x0000000000001010L});
+    public static final BitSet FOLLOW_12_in_ruleStruct_1447 = new BitSet(new long[]{0x0000000410000002L});
+    public static final BitSet FOLLOW_28_in_ruleStruct_1462 = new BitSet(new long[]{0x0000001860000000L});
+    public static final BitSet FOLLOW_ruleEntity_in_ruleStruct_1483 = new BitSet(new long[]{0x0000001860000000L});
+    public static final BitSet FOLLOW_29_in_ruleStruct_1496 = new BitSet(new long[]{0x0000000400000002L});
+    public static final BitSet FOLLOW_34_in_ruleStruct_1511 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRelationship__in_entryRuleRelationship_1549 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRelationship_1559 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleRelationship_1596 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship_1613 = new BitSet(new long[]{0x0000000410000802L});
+    public static final BitSet FOLLOW_11_in_ruleRelationship_1631 = new BitSet(new long[]{0x0000000000001010L});
+    public static final BitSet FOLLOW_ruleAttribute_in_ruleRelationship_1652 = new BitSet(new long[]{0x0000000000001010L});
+    public static final BitSet FOLLOW_12_in_ruleRelationship_1665 = new BitSet(new long[]{0x0000000410000002L});
+    public static final BitSet FOLLOW_28_in_ruleRelationship_1680 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleRelationship_1692 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_ruleRelationship_1704 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship_1721 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleRelationship_1738 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_ruleRelationship_1750 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRelationship_1767 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleRelationship_1784 = new BitSet(new long[]{0x0000000400000002L});
+    public static final BitSet FOLLOW_34_in_ruleRelationship_1799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAttribute_in_entryRuleAttribute1837 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAttribute1847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleAttribute1889 = new BitSet(new long[]{0x0000004400000002L});
+    public static final BitSet FOLLOW_38_in_ruleAttribute1907 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleAttribute1924 = new BitSet(new long[]{0x0000000400000002L});
+    public static final BitSet FOLLOW_34_in_ruleAttribute1944 = new BitSet(new long[]{0x0000000000000002L});
 
 }

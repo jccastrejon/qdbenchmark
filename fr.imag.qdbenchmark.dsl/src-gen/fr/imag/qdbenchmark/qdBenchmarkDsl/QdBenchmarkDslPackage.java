@@ -214,22 +214,22 @@ public interface QdBenchmarkDslPackage extends EPackage
   int SET___DATA_MODEL = ENTITY_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Entities</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SET___ENTITIES = ENTITY_FEATURE_COUNT + 1;
-
-  /**
    * The feature id for the '<em><b>Quality Specifications</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SET___QUALITY_SPECIFICATIONS = ENTITY_FEATURE_COUNT + 2;
+  int SET___QUALITY_SPECIFICATIONS = ENTITY_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Entities</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET___ENTITIES = ENTITY_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Set </em>' class.
@@ -508,17 +508,6 @@ public interface QdBenchmarkDslPackage extends EPackage
   EAttribute getSet__DataModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getEntities <em>Entities</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Entities</em>'.
-   * @see fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getEntities()
-   * @see #getSet_()
-   * @generated
-   */
-  EReference getSet__Entities();
-
-  /**
    * Returns the meta object for the containment reference list '{@link fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getQualitySpecifications <em>Quality Specifications</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -528,6 +517,17 @@ public interface QdBenchmarkDslPackage extends EPackage
    * @generated
    */
   EReference getSet__QualitySpecifications();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getEntities <em>Entities</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Entities</em>'.
+   * @see fr.imag.qdbenchmark.qdBenchmarkDsl.Set_#getEntities()
+   * @see #getSet_()
+   * @generated
+   */
+  EReference getSet__Entities();
 
   /**
    * Returns the meta object for class '{@link fr.imag.qdbenchmark.qdBenchmarkDsl.Struct_ <em>Struct </em>}'.
@@ -742,20 +742,20 @@ public interface QdBenchmarkDslPackage extends EPackage
     EAttribute SET___DATA_MODEL = eINSTANCE.getSet__DataModel();
 
     /**
-     * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SET___ENTITIES = eINSTANCE.getSet__Entities();
-
-    /**
      * The meta object literal for the '<em><b>Quality Specifications</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference SET___QUALITY_SPECIFICATIONS = eINSTANCE.getSet__QualitySpecifications();
+
+    /**
+     * The meta object literal for the '<em><b>Entities</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SET___ENTITIES = eINSTANCE.getSet__Entities();
 
     /**
      * The meta object literal for the '{@link fr.imag.qdbenchmark.qdBenchmarkDsl.impl.Struct_Impl <em>Struct </em>}' class.

@@ -22,8 +22,8 @@
     </genClasses>
     <genClasses ecoreClass="QdBenchmarkDsl.ecore#//Set_">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute QdBenchmarkDsl.ecore#//Set_/dataModel"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QdBenchmarkDsl.ecore#//Set_/entities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QdBenchmarkDsl.ecore#//Set_/qualitySpecifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QdBenchmarkDsl.ecore#//Set_/entities"/>
     </genClasses>
     <genClasses ecoreClass="QdBenchmarkDsl.ecore#//Struct_">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference QdBenchmarkDsl.ecore#//Struct_/entities"/>

@@ -21,10 +21,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Set_" eSuperTypes="#//Entity">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataModel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
-        eType="#//Entity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="qualitySpecifications"
         upperBound="-1" eType="#//QualitySpecification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Struct_" eSuperTypes="#//Entity">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
